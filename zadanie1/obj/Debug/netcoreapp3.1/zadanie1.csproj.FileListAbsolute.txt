@@ -1,0 +1,13 @@
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\bin\Debug\netcoreapp3.1\zadanie1.exe
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\bin\Debug\netcoreapp3.1\zadanie1.deps.json
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\bin\Debug\netcoreapp3.1\zadanie1.runtimeconfig.json
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\bin\Debug\netcoreapp3.1\zadanie1.runtimeconfig.dev.json
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\bin\Debug\netcoreapp3.1\zadanie1.dll
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\bin\Debug\netcoreapp3.1\zadanie1.pdb
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\obj\Debug\netcoreapp3.1\zadanie1.csprojAssemblyReference.cache
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\obj\Debug\netcoreapp3.1\zadanie1.AssemblyInfoInputs.cache
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\obj\Debug\netcoreapp3.1\zadanie1.AssemblyInfo.cs
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\obj\Debug\netcoreapp3.1\zadanie1.csproj.CoreCompileInputs.cache
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\obj\Debug\netcoreapp3.1\zadanie1.dll
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\obj\Debug\netcoreapp3.1\zadanie1.pdb
+C:\Users\Cavid\source\repos\zadanie1\zadanie1\obj\Debug\netcoreapp3.1\zadanie1.genruntimeconfig.cache
