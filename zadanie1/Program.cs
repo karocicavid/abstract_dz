@@ -1,4 +1,7 @@
-﻿using System;
+using Microsoft.VisualBasic;
+using System;
+using System.Linq;
+
 namespace cavid
 {
     abstract class Given
@@ -89,36 +92,21 @@ namespace cavid
         }
         public void Display()
         {
-            Console.WriteLine($"Количество аспирантов - {aspirant_quantity},количество - {student_quantity}");
+            Console.WriteLine($"\nКоличество аспирантов - {aspirant_quantity},количество - {student_quantity}");
         }
         public void Define(int x = 0)
         {
-            Console.Write("\nЕсли хотите добавить студента нажмите - 1,аспиранта - 2 : ");
+            Console.Write("\nЕсли хотите добавить студента нажмите - 1 :\nЕсли хотите добавить аспиранта нажмите - 2 : ");
             TryParse();
             if (Num1 == 1)
             {
                 Student student = new Student();
-                bool check = true;
-                while (check == true)
-                {
-                    Console.Write("Введите имя студента - ");
-                    student.Name = Console.ReadLine();
-                    Console.Write("Введите фамилию студента - ");
-                    student.Surname = Console.ReadLine();
-                    foreach (char a in student.Name + student.Surname)
-                    {
-                        if (a >= '0' && a <= '9')
-                        {
-                            Console.WriteLine("Попробуйте ввести  еще раз!\n");
-                            check = true;
-                            break;
-                        }
-                        else
-                        {
-                            check = false;
-                        }
-                    }
-                }
+
+                Console.Write("\nВведите имя студента - ");
+                student.Name = Alphabet_chechker();
+                Console.Write("Введите фамилию студента - ");
+                student.Surname = Alphabet_chechker();
+
                 Console.Write("Выберите курс обучения - ");
                 TryParse();
                 if (Num1 > 0 && Num1 < 5) { student.Course = Num1; }
@@ -133,27 +121,12 @@ namespace cavid
             else if (Num1 == 2)
             {
                 Aspirant aspirant = new Aspirant();
-                bool check = true;
-                while (check == true)
-                {
-                    Console.Write("Введите имя аспиранта - ");
-                    aspirant.Name = Console.ReadLine();
-                    Console.Write("Введите фамилию аспиранта - ");
-                    aspirant.Surname = Console.ReadLine();
-                    foreach (char a in aspirant.Name + aspirant.Surname)
-                    {
-                        if (a >= '0' && a <= '9')
-                        {
-                            Console.WriteLine("Попробуйте ввести  еще раз!\n");
-                            check = true;
-                            break;
-                        }
-                        else
-                        {
-                            check = false;
-                        }
-                    }
-                }
+
+                Console.Write("\nВведите имя аспиранта - ");
+                aspirant.Name = Alphabet_chechker();
+                Console.Write("Введите фамилию аспиранта - ");
+                aspirant.Surname = Alphabet_chechker();
+
                 Console.Write("Выберите курс обучения - ");
                 TryParse();
                 if (Num1 > 0 && Num1 < 5) { aspirant.Course = Num1; }
@@ -174,6 +147,35 @@ namespace cavid
             Console.WriteLine($"Привет!");
             Call name = new Call();
             name.Define();
+            Console.Read();
+        }
+        static string Alphabet_chechker()
+        {
+            bool check = true;
+            string input;
+            do
+            {
+                input = Console.ReadLine();
+                if (string.IsNullOrEmpty(input))
+                {
+                    { Console.WriteLine("Empty input!"); check = false; return Alphabet_chechker(); }
+                }
+                foreach (char i in input)
+                {
+                
+                    if (i < '0' || i > '9')
+                    {
+                        foreach (char a in "thequickbrownfoxjumpsoverthelazydogTHEQUICKBROWNFOXJUMPSOVERTHELAZYDOG")
+                        {
+                            if (a == i) { check = true; break; }
+                            else { check = false; }
+                        }
+                    }
+                    else { Console.WriteLine("input again!"); check = false; break; }
+                    if (check == false) { Console.WriteLine("input again!"); break; }
+                }
+            } while (check == false);
+            return input;
         }
     }
 }
