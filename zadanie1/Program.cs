@@ -1,7 +1,4 @@
-using Microsoft.VisualBasic;
 using System;
-using System.Linq;
-
 namespace cavid
 {
     abstract class Given
